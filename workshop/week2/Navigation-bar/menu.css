@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+ 
+ /*	Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+--------------------------------------------------------------------------------------- */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+html {
+  font-size: 18px;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  
+}
+
+p {
+  text-align: center;
+}
+header nav {
+  background: black;
+  text-transform: uppercase;
+
+}
+header nav ul {
+  display:flex;
+  justify-content: space-around;
+  flex-basis: 30px; 
+  padding: 30px;
+  font-weight: bold;
+   
+
+}
+header nav ul li {
+  color: white;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+
+}
+.image {
+  width: 100%;
+  display: block;
+}
+footer nav {
+  background: black;
+  border-top: white 1px solid;
+  text-transform: uppercase;
+}
+footer nav ul {
+  display: flex;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  justify-content:space-between;
+  flex-direction: row;
+  flex-basis: 30px; 
+  padding: 30px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a header:hover{
+  transition: red;
+}

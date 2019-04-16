@@ -2,20 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Pseudo Elements</title>
+    <title>Pseudo Elements - Icons</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/reset.css">
-
-    <!-- CUSTOM FONT -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-
-    <!-- DEMO STYLES -->
-    <link rel="stylesheet" href="css/pseudo.css">
+    <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
 
     <style>
 
-      ul.icons li:before {
+      /* COMMON
+      ------------------------------------------*/
+      a {
+        color: #333;
+        text-decoration: none;
+        transition: color .3s ease;
+      }
+      a:hover {
+        color: #0072b5;
+        text-decoration: underline;
+      }
+      ul.icons li {
+        margin-bottom: 1em;
+      }
+
+      /* PSEUDO ELEMENTS
+      ------------------------------------------*/
+      /*ul.icons li:before {
         content: "";
         display: inline-block;
         width: 20px;
@@ -33,14 +44,41 @@
       }
       ul.icons li:nth-child(4):before {
         content: "\2724";
-      }
+      } */
 
       .exemple {
         margin: 0 0 2rem;
       }
+      /*My DECO TITLE*/
+      .deco-title {
+        text-align: center;
+        margin-bottom: 2em;
+      }
+      .deco-title::after,
+      .deco-title::before
+       {
+        content: ""; 
+        display: block;
+        font-size: .8em;
+        width: 100px;
+        height: 1px;
+       /* background: black;*/
+       border-top: dotted 10px black;
+
+        margin: 1em auto 0;
+      }
+      .deco-title::before {
+        margin-bottom: 1em;
+
+      }
+      .deco-title::after {
+        border-top-color: red;
+        border-top-width: 3px;
+
+      }
 
 
-      /*DECO TITLE*/
+      /*DECO TITLE
       .deco-title {
         text-align: center;
       }
@@ -52,7 +90,14 @@
         height: 3px;
         background: #212529;
         margin: 2rem auto 4rem;
+      }*/
+      .icons li::before {
+        content: "\2709";
+        font-size: .8em;
+        margin-right: .6em;
+        color: red;
       }
+      
 
     </style>
 
@@ -61,11 +106,9 @@
 
     <main>
 
-      <h1 class="deco-title">Pseudo Elements</h1>
+      <h1 class="deco-title">Pseudo Elements - Icons</h1>
 
-      <hr>
-
-      <div class="exemple">
+      <div class="container MW-800 MA">
         <ul class="icons">
           <li><a href="#non">ENVELOPE</a></li>
           <li><a href="#non">VICTORY HAND</a></li>
@@ -77,7 +120,7 @@
     </main>
 
     <!-- FOOTER - liens ressources -->
-    <footer class="footer">
+    <footer class="footer MW-800 MA">
       <ul>
         <li><a href="https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements" target="_blank">MDN - Pseudo-elements</a></li>
         <li><a href="https://css-tricks.com/pseudo-element-roundup/" target="_blank">CSS Tricks - A Whole Bunch of Amazing Stuff Pseudo Elements Can Do</a></li>
