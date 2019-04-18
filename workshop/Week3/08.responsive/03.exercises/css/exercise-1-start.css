@@ -2,11 +2,30 @@
  * Points de ruptures:
  * 576px -> 768px -> 992px -> 1200px
 --------------------------------------------*/
+body {
+  background:darkgrey;
+}
+h1 { 
+  background: red;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  padding: 1em 5%;
+}
 
 
-
-/* PAR DEFAUT < 576px
+/* Mobile >576px
 --------------------------------------------*/
+
+@media screen and (min-width: 576px) {
+  body {
+    background: #fc0;
+  }
+  h1 {
+    background:pink;
+  }
+
+}
 /* background du body: #222; */
 /* font-size du h1: 1.2em */
 /* couleur du h1: #212121; */
