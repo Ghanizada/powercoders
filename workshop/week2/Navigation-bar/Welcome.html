@@ -11,49 +11,54 @@
   body {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
   background: #000;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
+
+header {
+  padding: 100px;
+}
+
 h1{
-  margin: 0;
+  margin: 0 auto;
+  width: 90%;
   padding: 0;
   color: #111;
   font-size: 16em;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 h1 span {
-  display: table-cell;
   margin: 0;
   padding: 0;
-  animation: animate 2s linear infinite;
+  animation: animate 9s linear infinite;
 }
-h1 span :nth-child(1) {
+h1 span:nth-child(1) {
   animation-delay: 0s;
 }
-h1 span :nth-child(2) {
-  animation-delay: 0.25s;
-}
-
-h1 span :nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-h1 span :nth-child(4) {
-  animation-delay: 0.75;
-}
-h1 span :nth-child(5) {
+h1 span:nth-child(2) {
   animation-delay: 1s;
 }
-h1 span :nth-child(6) {
-  animation-delay: 1.25s;
+
+h1 span:nth-child(3) {
+  animation-delay: 2s;
 }
-h1 span :nth-child(7) {
-  animation-delay: 1.5s;
+
+h1 span:nth-child(4) {
+  animation-delay: 3s;
 }
-h1 span :nth-child(8) {
-  animation-delay: 1.75s;
+h1 span:nth-child(5) {
+  animation-delay: 4s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 5s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 6s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 7s;
 }
 
 @keyframes animate {
@@ -78,19 +83,56 @@ h1 span :nth-child(8) {
   }
 }
 
+@media screen and (min-device-width: 375px) and (max-device-width: 667px){
+ h1 {
+  font-size: 3em;
+ 
+ }
+}
+@media screen and (min-device-width: 414px) and (max-device-width: 736px){
+ h1 {
+  font-size: 3em;
+  
+ }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+ h1 {
+  font-size: 3em;
+  
+ }
+}
+@media screen and (min-device-width: 1024px) and (max-device-width: 1366px){
+ h1 {
+  font-size: 16em;
+  
+ }
+}
+@media
+  (max-device-width: 158.74015748px) and (min-device-width: 143.62204724px){
+    h1
+  {
+   
+    font-size: 2em;
+   }
+}
+
+
 </style>
 
 <body>
-  <h1>
-    <span>w</span>
-    <span>e</span>
-    <span>l</span>
-    <span>c</span>
-    <span>o</span>
-    <span>m</span>
-    <span>e</span>
-    <span>!</span>
-  </h1>
+  <header>
+      <h1>
+          <span>w</span>
+          <span>e</span>
+          <span>l</span>
+          <span>c</span>
+          <span>o</span>
+          <span>m</span>
+          <span>e</span>
+          <span>!</span>
+        </h1>
+      
+  </header>
   
 </body>
 </html>

@@ -16,16 +16,19 @@
       /* SECTIONS
       -------------------*/
       section {
-        padding: 40px; /* marges intérieures pour tenir à distance son contenu */
+        padding: 40px; /* internal margins to keep its content at a distance */
         background-color: #eee; /* BG section */
       }
 
       figure {
         flex: 2;
-        margin: auto; /* juste un centrage au cas ou ce n'est pas du 100%... */
+        margin: auto; /* just a centering in case it's not 100%... */
       }
       figure img {
-        /*propriétés de la balise <img>...*/
+        /* <img> tag properties...*/
+        display: block;
+        width: 100%;
+        height: auto;
       }
 
       .figure-aside {
@@ -36,7 +39,10 @@
 
       .img-bg {
         min-height: 400px;
-        /*propriétés du background...*/
+        /* background properties */
+        background-image: url("img/unsplash-01.jpg");
+        background-repeat: no-repeat;
+        background: cover;
       }
     </style>
   </head>
@@ -46,12 +52,15 @@
     <section id="section-1">
       <figure class="image">
         <!--put an image here-->
+        <img src="img/judas-priest.jpg" alt="Judas judas-priest concert 2016">
+        <img src="img/unsplash-03.jpg" alt="Judas judas-priest concert 2016">
       </figure>
     </section>
 
     <section id="section-2" class="flex">
       <figure>
         <!--put an image here-->
+        <img src="img/unsplash-02.jpg" alt="swiss airlaine">
       </figure>
       <div class="figure-aside">
         <h2>Some title</h2>
