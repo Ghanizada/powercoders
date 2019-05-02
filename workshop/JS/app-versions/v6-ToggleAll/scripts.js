@@ -4,21 +4,17 @@ var todoList = {
 
 	todos: [
 		{
-			textTodo: "First",
+			todoText: "Item 1",
 			completed: true
 		},
 		{
-			textTodo: "Secound",
+			todoText: "Item 2",
 			completed: false
 		},
 		{
-			textTodo: "Third",
+			todoText: "Item 3",
 			completed: false
-    },
-    {
-      textTodo:"Fourth",
-      completed: true
-    }
+		}
 	],
 
 
@@ -69,13 +65,48 @@ var todoList = {
 		this.displayTodo();
 	},
 
+
+	toggleAll: function () {
+
+		var totalTodos = this.todos.length;
+		var completedTodos = 0;
+
+		// Get the number of completed todos
+		for (var i = 0; i < totalTodos; i++) {
+			if (this.todos[i].completed === true) {
+				completedTodos++;
+			}
+		}
+
+		// If everything is true, make everything false.
+		if (completedTodos === totalTodos) {
+			for (var i = 0; i < totalTodos; i++) {
+				this.todos[i].completed = false;
+			}
+		}
+
+		// Otherwise make everthing true.
+		else {
+			for (var i = 0; i < totalTodos; i++) {
+				this.todos[i].completed = true;
+			}
+		}
+
+		this.displayTodo();
+
+	} //End toggleAll() method
+
+
 };
 
 
 
-todoList.displayTodo();
+todoList.addTodo('first');
+todoList.addTodo('second');
 todoList.toggleCompleted(0);
 todoList.toggleCompleted(1);
+todoList.toggleAll();
+todoList.toggleAll();
 
 /*
   My Todos:

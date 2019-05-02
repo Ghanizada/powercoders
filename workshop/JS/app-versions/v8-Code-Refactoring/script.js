@@ -1,3 +1,8 @@
+/** 
+ * TODO LIST OBJECT
+ * -------------------------------------------------
+ * All methods related to list/array manipulation
+*/
 var todoList = {
 
 
@@ -22,8 +27,11 @@ var todoList = {
 		if (this.todos.length === 0) {
 			console.log('Your todo list is empty!');
 		}
+		
 		else {
+
 			console.log('My Todos:');
+			
 			for (var i = 0; i < this.todos.length; i++) {
 				if (this.todos[i].completed === true) {
 					console.log('(x)', this.todos[i].todoText);
@@ -32,7 +40,8 @@ var todoList = {
 					console.log('( )', this.todos[i].todoText);
 				}
 			}
-		}
+
+		} //END else
 
 	},
 
@@ -42,6 +51,7 @@ var todoList = {
 			todoText: todoText,
 			completed: false
 		});
+
 		this.displayTodos();
 	},
 
@@ -66,6 +76,7 @@ var todoList = {
 
 
 	toggleAll: function () {
+
 		var totalTodos = this.todos.length;
 		var completedTodos = 0;
 		// Get the number of completed todos
@@ -85,32 +96,74 @@ var todoList = {
 				this.todos[i].completed = true;
 			}
 		}
+
 		this.displayTodos();
+
 	}
 
 
 };
-	var displayTodoBtn = document.getElementById("displayTodoBtn");
-	//console.log (displayTodoBtn);
-	displayTodoBtn.addEventListener('click', function() {
+
+
+/** 
+ * HANDLERS OBJECT
+ * -------------------------------------------------
+ * Methods related to DOM elements
+*/
+var handlers = {
+
+
+	//NOTE: 
+	//Methods displayTodos() and toggleAll() are not mandatory 
+	//as you can use them directly from todoList object
+	//The are kept here for consistency...
+	//Is more consistent using the same object (handlers) for all DOM actions
+	
+
+	displayTodos: function () {
 		todoList.displayTodos();
-	});
-	var toggleAllBtn = document.getElementById("toggleAllBtn");
-	toggleAllBtn.addEventListener('click', function(){
+	},
+
+
+	toggleAll: function () {
 		todoList.toggleAll();
-	});
-	document.addEventListener('keydown', function(){
-		todoList.toggleAll();
-	});
+	},
 
 
-// var displayTodoButton = document.getElementById('displayTodoButton');
-// var toggleAllButton = document.getElementById('toggleAllButton');
+	addTodo: function () {
+		var addTodoTextInput = document.getElementById('addTodoTextInput');
+		todoList.addTodo(addTodoTextInput.value);
+		addTodoTextInput.value = '';
+	},
 
-// displayTodoButton.addEventListener('click', function () {
-// 	todoList.displayTodos();
-// });
 
-// toggleAllButton.addEventListener('click', function () {
-// 	todoList.toggleAll();
-// });
+	changeTodo: function () {
+		var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+		var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+		todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
+		changeTodoPositionInput.value = "";
+		changeTodoTextInput.value = '';
+	},
+
+
+	deleteTodo: function () {
+		var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+		todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+		deleteTodoPositionInput = '';
+	},
+
+
+	toggleCompleted: function () {
+		var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+		todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+		toggleCompletedPositionInput = '';
+	}
+
+
+};
+
+
+
+
+
+   
